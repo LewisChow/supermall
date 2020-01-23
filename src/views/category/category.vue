@@ -1,12 +1,27 @@
 <template>
   <div>
-    <h2>分类</h2>
+   
   </div>
 </template>
 
 <script>
+import Test from '../../components/test'
+
   export default {
-    name:"category"
+    name:"category",
+    components:{
+      Test
+    },
+    props:{
+      info:{
+        type:Array,
+        default(){
+          return []
+        }
+      }
+    }
+    
+   
   }
 </script>
 

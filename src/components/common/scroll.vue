@@ -20,6 +20,7 @@ export default {
       type:Boolean,
       default:false
     }
+   
   },
   data() {
     return {
@@ -34,10 +35,9 @@ export default {
     })
     this.scroll.on('scroll',position => {
       this.$emit('scroll',position)
-    }),
-    this.scroll.on('pullingUp',()=>{
-      this.$emit('pullingUp')
-      
+    })
+    this.scroll.on("pullingUp",() =>{
+      this.$emit("pullingUp")
     })
   },
   methods: {
@@ -48,6 +48,7 @@ export default {
       this.scroll.finishPullUp()
     },
     refresh(){
+      
       this.scroll.refresh()
     }
   },
